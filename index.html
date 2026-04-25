@@ -1429,10 +1429,19 @@
           display: block;
           width: clamp(112px, 14vw, 210px);
           opacity: 0.16;
+          filter: none;
           pointer-events: none;
           transform: translate3d(-24vw, -50%, 0) rotate(0deg);
           transform-origin: 50% 55%;
+          transition:
+            filter 320ms var(--ease-out),
+            opacity 320ms var(--ease-out);
           will-change: transform;
+        }
+
+        .scroll-guardian.is-over-depth {
+          opacity: 0.3;
+          filter: brightness(0) invert(1) drop-shadow(0 18px 30px rgba(35, 36, 41, 0.22));
         }
       }
 
@@ -1763,6 +1772,7 @@
       });
 
       const scrollGuardian = document.querySelector(".scroll-guardian");
+      const depthSection = document.querySelector("#diferenciais");
       const canAnimateGuardian = window.matchMedia("(min-width: 900px) and (prefers-reduced-motion: no-preference)").matches;
 
       if (scrollGuardian && canAnimateGuardian) {
@@ -1770,9 +1780,20 @@
         let currentProgress = 0;
         let ticking = false;
 
+        const updateGuardianTone = () => {
+          if (!depthSection) {
+            return;
+          }
+
+          const sectionRect = depthSection.getBoundingClientRect();
+          const guardianLine = window.innerHeight * 0.44;
+          scrollGuardian.classList.toggle("is-over-depth", sectionRect.top <= guardianLine && sectionRect.bottom >= guardianLine);
+        };
+
         const updateTarget = () => {
           const maxScroll = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
           targetProgress = window.scrollY / maxScroll;
+          updateGuardianTone();
 
           if (!ticking) {
             ticking = true;
