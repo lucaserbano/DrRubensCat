@@ -49,8 +49,11 @@
         --abrigo: #bfc9b9;
         --branco: #ffffff;
         --calma: #f5f5f0;
+        --espuma: #eef3ed;
+        --luz: #dfe7d9;
         --linha: rgba(144, 160, 181, 0.26);
         --sombra: 0 18px 50px rgba(35, 36, 41, 0.08);
+        --sombra-funda: 0 26px 70px rgba(35, 36, 41, 0.18);
         --radius-sm: 16px;
         --radius-md: 24px;
         --radius-lg: 38px;
@@ -71,7 +74,7 @@
         font-family: "Bricolage Grotesque", "Trebuchet MS", sans-serif;
         color: var(--profundeza);
         background:
-          radial-gradient(circle at 84% 18%, rgba(144, 160, 181, 0.13), transparent 28vw),
+          linear-gradient(115deg, rgba(60, 96, 138, 0.07) 0 1px, transparent 1px 74px),
           linear-gradient(180deg, var(--branco), #f8f9f6 46%, var(--branco));
         font-size: 16px;
         line-height: 1.6;
@@ -97,7 +100,7 @@
         position: sticky;
         top: 0;
         z-index: 20;
-        background: rgba(255, 255, 255, 0.94);
+        background: rgba(255, 255, 255, 0.92);
         border-bottom: 1px solid var(--linha);
         backdrop-filter: blur(16px);
       }
@@ -226,8 +229,10 @@
 
       .button-primary {
         color: var(--branco);
-        background: var(--mar-aberto);
-        box-shadow: 0 12px 22px rgba(60, 96, 138, 0.18);
+        background:
+          linear-gradient(135deg, rgba(255, 255, 255, 0.12), transparent 46%),
+          var(--mar-aberto);
+        box-shadow: 0 14px 26px rgba(60, 96, 138, 0.22);
       }
 
       .button-primary:hover {
@@ -237,7 +242,7 @@
 
       .button-secondary {
         color: var(--mar-aberto);
-        background: transparent;
+        background: rgba(255, 255, 255, 0.34);
       }
 
       .button-secondary:hover {
@@ -260,20 +265,26 @@
       }
 
       .section-depth {
+        color: var(--branco);
         background:
-          radial-gradient(circle at 18% 22%, rgba(255, 255, 255, 0.5), transparent 18rem),
-          radial-gradient(circle at 88% 20%, rgba(60, 96, 138, 0.22), transparent 22rem),
-          linear-gradient(135deg, rgba(191, 201, 185, 0.78) 0%, rgba(245, 245, 240, 0.92) 46%, rgba(60, 96, 138, 0.2) 100%),
-          var(--calma);
+          linear-gradient(116deg, rgba(255, 255, 255, 0.1) 0 1px, transparent 1px 86px),
+          linear-gradient(152deg, #233646 0%, var(--mar-aberto) 46%, #9fb0aa 100%);
+      }
+
+      .section-depth .accent,
+      .section-depth .eyebrow {
+        color: var(--espuma);
       }
 
       .section-depth .section-kicker p {
-        color: rgba(35, 36, 41, 0.78);
+        color: rgba(255, 255, 255, 0.78);
       }
 
       .section-dark {
         color: var(--branco);
-        background: var(--profundeza);
+        background:
+          linear-gradient(118deg, rgba(255, 255, 255, 0.04) 0 1px, transparent 1px 82px),
+          var(--profundeza);
       }
 
       .section-dark .eyebrow {
@@ -297,9 +308,23 @@
         padding: 56px 0 92px;
         overflow: hidden;
         background:
-          radial-gradient(circle at 22% 16%, rgba(191, 201, 185, 0.36), transparent 24rem),
-          radial-gradient(circle at 82% 76%, rgba(60, 96, 138, 0.12), transparent 26rem),
+          linear-gradient(120deg, rgba(60, 96, 138, 0.08) 0 1px, transparent 1px 82px),
+          linear-gradient(180deg, rgba(191, 201, 185, 0.26), rgba(255, 255, 255, 0) 38%),
           var(--branco);
+      }
+
+      .hero::after {
+        position: absolute;
+        right: -18vw;
+        bottom: -10vw;
+        z-index: 0;
+        width: 74vw;
+        height: 74vw;
+        max-width: 880px;
+        max-height: 880px;
+        border: 1px solid rgba(60, 96, 138, 0.12);
+        border-radius: 999px;
+        content: "";
       }
 
       .hero-grid {
@@ -340,8 +365,8 @@
       h1 {
         max-width: 11ch;
         margin-bottom: 22px;
-        font-size: clamp(36px, 10vw, 64px);
-        line-height: 1.05;
+        font-size: clamp(38px, 11vw, 74px);
+        line-height: 0.98;
         font-weight: 700;
         letter-spacing: 0;
       }
@@ -349,8 +374,8 @@
       h2 {
         max-width: 17ch;
         margin-bottom: 18px;
-        font-size: clamp(27px, 7vw, 40px);
-        line-height: 1.12;
+        font-size: clamp(28px, 7vw, 46px);
+        line-height: 1.05;
         font-weight: 600;
         letter-spacing: 0;
       }
@@ -365,6 +390,10 @@
 
       .accent {
         color: var(--mar-aberto);
+      }
+
+      .section-depth .accent {
+        color: var(--luz);
       }
 
       .lead {
@@ -433,6 +462,7 @@
         border: 1px solid var(--linha);
         border-radius: var(--radius-lg);
         background:
+          linear-gradient(120deg, rgba(255, 255, 255, 0.42) 0 1px, transparent 1px 68px),
           linear-gradient(150deg, rgba(60, 96, 138, 0.1), rgba(191, 201, 185, 0.28)),
           var(--calma);
         box-shadow: var(--sombra);
@@ -526,11 +556,13 @@
         bottom: 0;
         z-index: 2;
         width: min(86%, 315px);
-        padding: 18px;
-        border-radius: var(--radius-md);
+        padding: 20px;
+        border-radius: 30px;
         color: var(--branco);
-        background: var(--mar-aberto);
-        box-shadow: 0 22px 44px rgba(35, 36, 41, 0.18);
+        background:
+          linear-gradient(135deg, rgba(255, 255, 255, 0.14), transparent 44%),
+          var(--mar-aberto);
+        box-shadow: var(--sombra-funda);
       }
 
       .bubble-field {
@@ -642,18 +674,34 @@
 
       .benefit {
         position: relative;
-        padding: 24px 22px;
-        border: 1px solid var(--linha);
-        border-radius: var(--radius-md);
-        background: var(--branco);
+        overflow: hidden;
+        min-height: 260px;
+        padding: 28px 24px;
+        border: 1px solid rgba(255, 255, 255, 0.22);
+        border-radius: 34px;
+        background:
+          linear-gradient(145deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.08)),
+          rgba(255, 255, 255, 0.1);
+        box-shadow: 0 22px 52px rgba(35, 36, 41, 0.12);
         transition:
           transform 240ms var(--ease-out),
           box-shadow 240ms var(--ease-out);
       }
 
+      .benefit::after {
+        position: absolute;
+        right: -10px;
+        bottom: -38px;
+        color: rgba(255, 255, 255, 0.11);
+        font-size: 128px;
+        font-weight: 700;
+        line-height: 1;
+        content: attr(data-number);
+      }
+
       .benefit:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 18px 36px rgba(35, 36, 41, 0.07);
+        transform: translateY(-5px);
+        box-shadow: 0 28px 68px rgba(35, 36, 41, 0.18);
       }
 
       .benefit-number {
@@ -664,13 +712,17 @@
         margin-bottom: 18px;
         border-radius: 999px;
         color: var(--branco);
-        background: var(--mar-aberto);
+        background: rgba(255, 255, 255, 0.18);
         font-weight: 700;
+      }
+
+      .benefit h3 {
+        color: var(--branco);
       }
 
       .benefit p {
         margin-bottom: 0;
-        color: rgba(35, 36, 41, 0.7);
+        color: rgba(255, 255, 255, 0.76);
       }
 
       .proof-layout {
@@ -716,8 +768,24 @@
         padding: 22px;
         border: 1px solid var(--linha);
         border-radius: var(--radius-md);
-        background: var(--branco);
+        background:
+          linear-gradient(150deg, rgba(191, 201, 185, 0.13), rgba(255, 255, 255, 0) 42%),
+          var(--branco);
         box-shadow: 0 2px 16px rgba(35, 36, 41, 0.04);
+      }
+
+      .quote-feature {
+        color: var(--branco);
+        border-color: transparent;
+        background:
+          linear-gradient(135deg, rgba(255, 255, 255, 0.12), transparent 46%),
+          var(--mar-aberto);
+        box-shadow: var(--sombra-funda);
+      }
+
+      .quote-feature p,
+      .quote-feature cite {
+        color: var(--branco);
       }
 
       blockquote p {
@@ -761,6 +829,7 @@
       .prenatal-visual .photo-placeholder {
         min-height: 320px;
         background:
+          linear-gradient(116deg, rgba(60, 96, 138, 0.08) 0 1px, transparent 1px 70px),
           linear-gradient(150deg, rgba(191, 201, 185, 0.48), rgba(255, 255, 255, 0.42)),
           var(--calma);
       }
@@ -858,7 +927,9 @@
         min-height: 380px;
         padding: 70px 0 74px;
         color: rgba(255, 255, 255, 0.72);
-        background: var(--profundeza);
+        background:
+          linear-gradient(118deg, rgba(255, 255, 255, 0.045) 0 1px, transparent 1px 82px),
+          linear-gradient(180deg, #232429, #1d2328);
         border-top: 1px solid rgba(255, 255, 255, 0.12);
       }
 
@@ -1132,10 +1203,15 @@
       @media (min-width: 760px) {
         .benefits {
           grid-template-columns: repeat(3, 1fr);
+          align-items: stretch;
         }
 
         .quotes {
           grid-template-columns: repeat(2, 1fr);
+        }
+
+        .quote-feature {
+          grid-column: span 2;
         }
       }
 
@@ -1193,14 +1269,14 @@
         }
 
         .hero-grid {
-          grid-template-columns: minmax(0, 0.96fr) minmax(380px, 1fr);
+          grid-template-columns: minmax(0, 0.92fr) minmax(380px, 1.08fr);
           align-items: center;
           min-height: calc(100svh - 84px);
           gap: clamp(56px, 8vw, 92px);
         }
 
         .hero-copy {
-          max-width: 560px;
+          max-width: 610px;
           padding: clamp(76px, 10vw, 120px) 0;
         }
 
@@ -1215,8 +1291,8 @@
 
         .hero-visual::before {
           background:
-            linear-gradient(90deg, var(--branco) 0%, rgba(255, 255, 255, 0.96) 18%, rgba(255, 255, 255, 0.52) 44%, rgba(255, 255, 255, 0.06) 74%),
-            linear-gradient(180deg, rgba(35, 36, 41, 0.08), rgba(35, 36, 41, 0.02));
+            linear-gradient(90deg, var(--branco) 0%, rgba(255, 255, 255, 0.95) 18%, rgba(255, 255, 255, 0.5) 44%, rgba(255, 255, 255, 0.05) 74%),
+            linear-gradient(180deg, rgba(35, 36, 41, 0.1), rgba(35, 36, 41, 0.02));
         }
 
         .hero-visual .photo-placeholder,
@@ -1233,8 +1309,8 @@
           place-items: center end;
           padding: clamp(32px, 5vw, 72px);
           background:
-            radial-gradient(circle at 70% 18%, rgba(255, 255, 255, 0.42), transparent 16rem),
-            linear-gradient(135deg, rgba(191, 201, 185, 0.72), rgba(60, 96, 138, 0.24)),
+            linear-gradient(122deg, rgba(255, 255, 255, 0.16) 0 1px, transparent 1px 92px),
+            linear-gradient(135deg, rgba(191, 201, 185, 0.9), rgba(60, 96, 138, 0.42)),
             var(--calma);
         }
 
@@ -1278,6 +1354,30 @@
           bottom: clamp(36px, 8vw, 88px);
         }
 
+        .section-depth {
+          padding: clamp(112px, 12vw, 158px) 0;
+        }
+
+        .section-depth .section-kicker {
+          max-width: 44rem;
+        }
+
+        .benefits {
+          grid-template-columns: 1.18fr 0.91fr 0.91fr;
+          gap: 22px;
+        }
+
+        .benefit:first-child {
+          min-height: 340px;
+          padding: 38px;
+        }
+
+        .benefit:first-child h3 {
+          max-width: 10ch;
+          font-size: clamp(28px, 3.6vw, 42px);
+          line-height: 1.02;
+        }
+
         .proof-layout {
           grid-template-columns: 0.74fr 1.26fr;
           align-items: start;
@@ -1286,6 +1386,18 @@
 
         .quotes {
           grid-template-columns: repeat(3, 1fr);
+          align-items: stretch;
+        }
+
+        .quote-feature {
+          grid-column: span 2;
+          min-height: 235px;
+          padding: 34px;
+        }
+
+        .quote-feature p {
+          font-size: clamp(21px, 2.2vw, 29px);
+          line-height: 1.22;
         }
 
         .prenatal {
@@ -1453,19 +1565,19 @@
           </div>
 
           <div class="benefits">
-            <article class="benefit reveal">
+            <article class="benefit reveal" data-number="1">
               <div class="benefit-number">1</div>
               <h3>Consulta sem pressa</h3>
               <p>Tempo real de escuta, exame cuidadoso e explicação em linguagem acessível. A mãe sai com clareza, não só com receita.</p>
             </article>
 
-            <article class="benefit reveal">
+            <article class="benefit reveal" data-number="2">
               <div class="benefit-number">2</div>
               <h3>WhatsApp pessoal após a consulta</h3>
               <p>Dúvidas, urgências e fins de semana. Muitas famílias deixam de transformar cada insegurança em ida ao pronto-atendimento.</p>
             </article>
 
-            <article class="benefit reveal">
+            <article class="benefit reveal" data-number="3">
               <div class="benefit-number">3</div>
               <h3>Atendimento fora do horário</h3>
               <p>Em situações pontuais, há suporte fora do horário comercial, com orientação para definir se o melhor caminho é presencial, telemedicina ou pronto-atendimento.</p>
@@ -1491,7 +1603,7 @@
           </div>
 
           <div class="quotes">
-            <blockquote class="reveal">
+            <blockquote class="quote-feature reveal">
               <p>"Meus filhos adoram ir na consulta. Constantemente lembram do 'tio Rubens'."</p>
               <cite>M. · avaliação pública</cite>
             </blockquote>
