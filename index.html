@@ -584,7 +584,7 @@
         border-radius: 999px;
         background:
           radial-gradient(circle at 34% 28%, rgba(255, 255, 255, 0.82), rgba(255, 255, 255, 0.12) 38%, rgba(144, 160, 181, 0.06));
-        opacity: var(--opacity, 0.52);
+        opacity: var(--opacity, 0.32);
         animation: bubble-rise var(--duration, 14s) var(--ease-out) infinite alternate;
         animation-delay: var(--delay, 0s);
       }
@@ -640,6 +640,44 @@
         left: 7%;
         bottom: 46px;
         animation-delay: -3s;
+      }
+
+      .current-hero-a {
+        right: 18%;
+        bottom: 18%;
+        width: clamp(64px, 10vw, 108px);
+        opacity: 0.26;
+        animation-delay: -5s;
+      }
+
+      .current-proof-a {
+        right: 7%;
+        top: 74px;
+        width: clamp(82px, 12vw, 138px);
+        opacity: 0.22;
+      }
+
+      .current-proof-b {
+        left: 10%;
+        bottom: 46px;
+        width: clamp(58px, 9vw, 96px);
+        opacity: 0.2;
+        animation-delay: -6s;
+      }
+
+      .current-prenatal-a {
+        left: clamp(18px, 8vw, 110px);
+        top: 58px;
+        width: clamp(82px, 14vw, 150px);
+        opacity: 0.18;
+      }
+
+      .current-final-a {
+        right: 8%;
+        top: 46px;
+        width: clamp(86px, 13vw, 146px);
+        opacity: 0.18;
+        filter: brightness(0) invert(1);
       }
 
       .small-card strong {
@@ -1440,8 +1478,8 @@
         }
 
         .scroll-guardian.is-over-depth {
-          opacity: 0.3;
-          filter: brightness(0) invert(1) drop-shadow(0 18px 30px rgba(35, 36, 41, 0.22));
+          opacity: 0.58;
+          filter: brightness(0) invert(97%) sepia(10%) saturate(358%) hue-rotate(47deg) brightness(112%) contrast(98%) drop-shadow(0 18px 30px rgba(35, 36, 41, 0.22));
         }
       }
 
@@ -1519,10 +1557,9 @@
       <section class="hero">
         <div class="bubble-field" aria-hidden="true">
           <span style="--x: 9%; --y: 72%; --size: 34px; --duration: 12s"></span>
-          <span style="--x: 28%; --y: 18%; --size: 18px; --duration: 10s; --delay: -3s"></span>
-          <span style="--x: 46%; --y: 84%; --size: 58px; --duration: 16s; --delay: -5s"></span>
           <span style="--x: 78%; --y: 22%; --size: 72px; --duration: 18s; --delay: -7s; --opacity: 0.38"></span>
         </div>
+        <img class="decorative-current current-hero-a" src="id-visual/elementos-svg/3.svg" alt="" aria-hidden="true" />
         <div class="container hero-grid">
           <div class="hero-copy reveal">
             <p class="eyebrow">Pediatra em Curitiba</p>
@@ -1558,14 +1595,11 @@
 
       <section class="section section-soft section-depth" id="diferenciais">
         <div class="bubble-field" aria-hidden="true">
-          <span style="--x: 8%; --y: 24%; --size: 52px; --duration: 15s"></span>
-          <span style="--x: 18%; --y: 82%; --size: 22px; --duration: 11s; --delay: -4s"></span>
           <span style="--x: 86%; --y: 26%; --size: 66px; --duration: 17s; --delay: -6s"></span>
-          <span style="--x: 72%; --y: 76%; --size: 30px; --duration: 13s; --delay: -2s"></span>
         </div>
         <img class="section-illustration benefits-figure" src="id-visual/ilustracoes-svg/Explorador_4.svg" alt="" aria-hidden="true" />
         <img class="decorative-current current-benefits-a" src="id-visual/elementos-svg/6.svg" alt="" aria-hidden="true" />
-        <img class="decorative-current current-benefits-b" src="id-visual/elementos-svg/10.svg" alt="" aria-hidden="true" />
+        <img class="decorative-current current-benefits-b" src="id-visual/elementos-svg/7.svg" alt="" aria-hidden="true" />
         <div class="container">
           <div class="section-kicker reveal">
             <p class="eyebrow">O que muda para a família</p>
@@ -1597,11 +1631,11 @@
 
       <section class="section">
         <div class="bubble-field" aria-hidden="true">
-          <span style="--x: 12%; --y: 72%; --size: 48px; --duration: 14s"></span>
           <span style="--x: 42%; --y: 18%; --size: 20px; --duration: 12s; --delay: -5s"></span>
-          <span style="--x: 91%; --y: 54%; --size: 74px; --duration: 18s; --delay: -8s; --opacity: 0.34"></span>
         </div>
         <img class="section-illustration proof-figure" src="id-visual/ilustracoes-svg/Elmo_2.svg" alt="" aria-hidden="true" />
+        <img class="decorative-current current-proof-a" src="id-visual/elementos-svg/11.svg" alt="" aria-hidden="true" />
+        <img class="decorative-current current-proof-b" src="id-visual/elementos-svg/3.svg" alt="" aria-hidden="true" />
         <div class="container proof-layout">
           <div class="proof-number reveal">
             <p class="eyebrow">O que dizem mães e pais</p>
@@ -1646,11 +1680,7 @@
       </section>
 
       <section class="section section-soft">
-        <div class="bubble-field" aria-hidden="true">
-          <span style="--x: 22%; --y: 18%; --size: 44px; --duration: 14s"></span>
-          <span style="--x: 84%; --y: 76%; --size: 26px; --duration: 12s; --delay: -3s"></span>
-          <span style="--x: 52%; --y: 88%; --size: 68px; --duration: 18s; --delay: -8s; --opacity: 0.32"></span>
-        </div>
+        <img class="decorative-current current-prenatal-a" src="id-visual/elementos-svg/7.svg" alt="" aria-hidden="true" />
         <div class="container prenatal">
           <div class="prenatal-visual reveal">
             <!-- Substitua este bloco por uma tag img.photo-real apontando para a foto de apoio. -->
@@ -1683,10 +1713,9 @@
 
       <section class="section section-dark">
         <div class="bubble-field" aria-hidden="true">
-          <span style="--x: 16%; --y: 78%; --size: 54px; --duration: 16s; --opacity: 0.28"></span>
           <span style="--x: 76%; --y: 18%; --size: 24px; --duration: 11s; --delay: -4s; --opacity: 0.4"></span>
-          <span style="--x: 90%; --y: 72%; --size: 86px; --duration: 20s; --delay: -8s; --opacity: 0.22"></span>
         </div>
+        <img class="decorative-current current-final-a" src="id-visual/elementos-svg/11.svg" alt="" aria-hidden="true" />
         <div class="container final-grid">
           <div class="reveal">
             <p class="eyebrow">Contatos</p>
@@ -1828,7 +1857,7 @@
 
       if (canAnimateBubbles) {
         const isDesktopBubbles = window.matchMedia("(min-width: 900px)").matches;
-        const bubbleCount = isDesktopBubbles ? 34 : 9;
+        const bubbleCount = isDesktopBubbles ? 12 : 4;
         const bubbleData = [];
         let bubbleFrame = null;
 
@@ -1848,7 +1877,7 @@
             speed: isDesktopBubbles ? 0.16 + Math.random() * 0.32 : 0.09 + Math.random() * 0.16,
             drift: (Math.random() > 0.5 ? 1 : -1) * (isDesktopBubbles ? 10 + Math.random() * 36 : 6 + Math.random() * 18),
             scale: 0.86 + Math.random() * 0.42,
-            opacity: isDesktopBubbles ? 0.14 + Math.random() * 0.28 : 0.08 + Math.random() * 0.18,
+            opacity: isDesktopBubbles ? 0.08 + Math.random() * 0.18 : 0.05 + Math.random() * 0.12,
           });
         }
 
