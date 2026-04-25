@@ -728,10 +728,10 @@
 
       .benefit::after {
         position: absolute;
-        right: -10px;
-        bottom: -38px;
+        right: 18px;
+        bottom: -14px;
         color: rgba(255, 255, 255, 0.11);
-        font-size: 128px;
+        font-size: clamp(104px, 9vw, 132px);
         font-weight: 700;
         line-height: 1;
         content: attr(data-number);
@@ -824,6 +824,10 @@
       .quote-feature p,
       .quote-feature cite {
         color: var(--branco);
+      }
+
+      .quote-extra-desktop {
+        display: none;
       }
 
       blockquote p {
@@ -1410,12 +1414,6 @@
           padding: 38px;
         }
 
-        .benefit:first-child h3 {
-          max-width: 10ch;
-          font-size: clamp(28px, 3.6vw, 42px);
-          line-height: 1.02;
-        }
-
         .proof-layout {
           grid-template-columns: 0.74fr 1.26fr;
           align-items: start;
@@ -1436,6 +1434,10 @@
         .quote-feature p {
           font-size: clamp(21px, 2.2vw, 29px);
           line-height: 1.22;
+        }
+
+        .quote-extra-desktop {
+          display: block;
         }
 
         .prenatal {
@@ -1674,6 +1676,16 @@
             <blockquote class="reveal">
               <p>"A consulta é muito clara, explicativa: uma aula. Excelente médico."</p>
               <cite>Avaliação pública</cite>
+            </blockquote>
+
+            <blockquote class="quote-extra-desktop reveal">
+              <p>"Fala de forma paternal com os pacientes. Meu filho ama ir à consulta com ele."</p>
+              <cite>I. · avaliação pública</cite>
+            </blockquote>
+
+            <blockquote class="quote-extra-desktop reveal">
+              <p>"Atendeu em pleno sábado à noite (teleconsulta) após termos o diagnóstico de covid do nosso filho."</p>
+              <cite>K. · avaliação pública</cite>
             </blockquote>
           </div>
         </div>
