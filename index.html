@@ -96,6 +96,109 @@
         margin-inline: auto;
       }
 
+      .section-video {
+        width: 100%;
+        background: #000;
+      }
+
+      .video-ratio {
+        position: relative;
+        width: 100%;
+        padding-top: 56.25%;
+        overflow: hidden;
+      }
+
+      .video-ratio video {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .hero-eyebrow {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 3px;
+        margin-left: 0;
+        letter-spacing: 0.05em;
+      }
+
+      .hero-eyebrow::before {
+        display: none;
+      }
+
+      .hero-eyebrow span {
+        display: block;
+        color: rgba(60, 96, 138, 0.65);
+        font-size: 11px;
+        font-weight: 500;
+        letter-spacing: 0.09em;
+        text-transform: uppercase;
+      }
+
+      .hero-caption {
+        margin-top: 20px;
+        margin-bottom: 0;
+        font-size: clamp(16px, 3.2vw, 19px);
+        color: rgba(35, 36, 41, 0.62);
+        line-height: 1.5;
+        letter-spacing: 0.01em;
+      }
+
+      .hero-photo-wrap {
+        position: relative;
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .hero-photo-frame {
+        position: relative;
+        width: min(300px, 80vw);
+        aspect-ratio: 3 / 4;
+        border-radius: 56px;
+        border: 3px solid var(--mar-aberto);
+        overflow: hidden;
+        box-shadow: 0 32px 72px rgba(60, 96, 138, 0.28), 0 0 0 6px rgba(60, 96, 138, 0.1);
+      }
+
+      .hero-photo-frame img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center top;
+        border-radius: 0;
+        border: 0;
+        box-shadow: none;
+        min-height: 0;
+        display: block;
+      }
+
+      .hero-photo-badge {
+        position: absolute;
+        bottom: -22px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: max-content;
+        max-width: calc(100% + 32px);
+        padding: 11px 22px;
+        border-radius: 999px;
+        background: linear-gradient(135deg, rgba(255,255,255,0.15), transparent 48%), var(--mar-aberto);
+        color: var(--branco);
+        font-size: clamp(12px, 1.2vw, 14px);
+        font-weight: 600;
+        line-height: 1.3;
+        text-align: center;
+        white-space: nowrap;
+        box-shadow: 0 10px 28px rgba(60, 96, 138, 0.32);
+      }
+
+      .doctoralia-widget-wrap {
+        margin-top: 28px;
+      }
+
       .site-header {
         position: sticky;
         top: 0;
@@ -308,9 +411,8 @@
         padding: 56px 0 92px;
         overflow: hidden;
         background:
-          linear-gradient(120deg, rgba(60, 96, 138, 0.08) 0 1px, transparent 1px 82px),
-          linear-gradient(180deg, rgba(191, 201, 185, 0.26), rgba(255, 255, 255, 0) 38%),
-          var(--branco);
+          linear-gradient(120deg, rgba(60, 96, 138, 0.06) 0 1px, transparent 1px 82px),
+          linear-gradient(135deg, #f8fafe 0%, #dde9f5 45%, #bdd0e8 100%);
       }
 
       .hero::after {
@@ -407,8 +509,9 @@
         max-width: 35rem;
         margin: 22px 0 0;
         color: rgba(35, 36, 41, 0.72);
-        font-size: 16px;
-        line-height: 1.55;
+        font-size: clamp(18px, 4.5vw, 22px);
+        font-weight: 500;
+        line-height: 1.45;
       }
 
       .hero-actions,
@@ -439,17 +542,14 @@
       .hero-visual {
         position: relative;
         z-index: 0;
-        min-height: 450px;
         margin-top: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
 
       .hero-visual::before {
-        position: absolute;
-        inset: 0;
-        z-index: 1;
-        pointer-events: none;
-        background: linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(245, 245, 240, 0.9));
-        content: "";
+        display: none;
       }
 
       .photo-placeholder {
@@ -1445,71 +1545,34 @@
         }
 
         .hero-visual {
-          position: absolute;
-          z-index: 0;
-          inset: 0;
-          min-height: 100%;
+          position: relative;
+          z-index: 2;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          min-height: 0;
           margin-top: 0;
         }
 
         .hero-visual::before {
-          background:
-            linear-gradient(90deg, var(--branco) 0%, rgba(255, 255, 255, 0.97) 24%, rgba(255, 255, 255, 0.72) 50%, rgba(255, 255, 255, 0.04) 82%),
-            linear-gradient(180deg, rgba(35, 36, 41, 0.1), rgba(35, 36, 41, 0.02));
+          display: none;
         }
 
-        .hero-visual .photo-placeholder,
-        .hero-visual .photo-real {
-          position: absolute;
-          inset: 0;
-          min-height: 100%;
-          border: 0;
-          border-radius: 0;
-          box-shadow: none;
-        }
-
-        .hero-visual .photo-placeholder {
-          place-items: center end;
-          padding: clamp(32px, 5vw, 72px);
-          background:
-            linear-gradient(122deg, rgba(255, 255, 255, 0.16) 0 1px, transparent 1px 92px),
-            linear-gradient(135deg, rgba(191, 201, 185, 0.9), rgba(60, 96, 138, 0.42)),
-            var(--calma);
-        }
-
-        .hero-visual .photo-placeholder::before {
-          inset: clamp(26px, 4vw, 56px);
-          border-color: rgba(255, 255, 255, 0.42);
-        }
-
-        .hero-visual .photo-placeholder::after {
-          right: 7%;
-          bottom: 12%;
-          width: clamp(220px, 28vw, 390px);
-          height: clamp(220px, 28vw, 390px);
-          background: rgba(255, 255, 255, 0.16);
-        }
-
-        .hero-visual .photo-label {
-          max-width: 14rem;
-          color: var(--profundeza);
-          text-align: right;
-        }
-
-        .hero-visual .photo-label span {
-          color: rgba(35, 36, 41, 0.68);
+        .hero-photo-frame {
+          width: min(420px, 34vw);
+          border-radius: 64px;
         }
 
         .mark-hero {
-          right: min(12vw, 128px);
-          top: 14%;
-          z-index: 2;
+          right: -24px;
+          top: 8%;
+          z-index: 3;
         }
 
         .mark-hero-line {
-          left: 26%;
-          bottom: 12%;
-          z-index: 2;
+          left: -8px;
+          bottom: 8%;
+          z-index: 3;
         }
 
         .small-card {
@@ -1685,27 +1748,36 @@
         <img class="decorative-current current-hero-a" src="id-visual/elementos-svg/3.svg" alt="" aria-hidden="true" />
         <div class="container hero-grid">
           <div class="hero-copy reveal">
-            <p class="eyebrow">Pediatra em Curitiba</p>
-            <h1>A <span class="accent">tranquilidade</span> de sair sabendo <span class="accent">exatamente</span> o que fazer</h1>
+            <p class="eyebrow hero-eyebrow">Prof. Dr. Rubens Cat · Pediatra<span>CRM/PR 9473 · RQE 4836</span></p>
+            <h1><span class="accent">Tranquilidade</span> de saber <span class="accent">exatamente</span> o que fazer</h1>
             <p class="lead">
               Consulta sem pressa, explicação clara e o WhatsApp pessoal do Dr. Rubens anotado para quando a dúvida aparecer depois.
             </p>
-            <p class="hero-process">
-              Na primeira consulta, a conversa começa pelo que mais preocupa a família, passa pela história da criança e termina com um plano claro de como conduzir e o que observar.
-            </p>
-            <div class="hero-actions" aria-label="Ações principais">
-              <a class="button button-primary" href="contatos.html">Agende a consulta</a>
-              <a class="button button-secondary" href="#diferenciais">Conheça o atendimento</a>
+            <p class="hero-caption">Consulta particular · Presencial no Batel, Curitiba/PR · Teleconsulta</p>
+            <div class="doctoralia-widget-wrap">
+              <a id="zl-url" class="zl-url" href="https://www.doctoralia.com.br/rubens-cat/pediatra/curitiba" rel="nofollow" data-zlw-doctor="rubens-cat" data-zlw-type="big_with_calendar" data-zlw-opinion="false" data-zlw-hide-branding="true" data-zlw-saas-only="false" data-zlw-a11y-title="Widget de marcação de consultas médicas">Marque uma consulta</a>
+              <script>!function($_x,_s,id){var js,fjs=$_x.getElementsByTagName(_s)[0];if(!$_x.getElementById(id)){js = $_x.createElement(_s);js.id = id;js.src = "//platform.docplanner.com/js/widget.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","zl-widget-s");</script>
             </div>
           </div>
+          <div class="hero-visual reveal">
+            <div class="hero-photo-wrap">
+              <div class="hero-photo-frame">
+                <img src="fotos/foto-rosto.webp" alt="Dr. Rubens Cat, pediatra em Curitiba" />
+              </div>
+              <div class="hero-photo-badge">Mais de 40 anos de consultório · 30 anos como professor na UFPR</div>
+            </div>
+            <img class="floating-mark mark-hero" src="id-visual/elementos-svg/2.svg" alt="" aria-hidden="true" />
+            <img class="floating-mark mark-hero-line" src="id-visual/elementos-svg/8.svg" alt="" aria-hidden="true" />
+          </div>
         </div>
-        <div class="hero-visual reveal">
-          <video class="photo-real hero-photo" autoplay muted loop playsinline poster="fotos/video-hero-poster.jpg">
+      </section>
+
+      <section class="section-video">
+        <div class="video-ratio">
+          <video autoplay muted loop playsinline poster="fotos/video-hero-poster.jpg">
             <source src="fotos/video-hero.webm" type="video/webm" />
             <source src="fotos/video-hero.mp4" type="video/mp4" />
           </video>
-          <img class="floating-mark mark-hero" src="id-visual/elementos-svg/2.svg" alt="" aria-hidden="true" />
-          <img class="floating-mark mark-hero-line" src="id-visual/elementos-svg/8.svg" alt="" aria-hidden="true" />
         </div>
       </section>
 
