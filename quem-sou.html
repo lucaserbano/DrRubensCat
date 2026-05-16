@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Dr. Rubens Cat | Pediatria com presença em Curitiba</title>
+    <title>Quem sou | Dr. Rubens Cat — Pediatra em Curitiba</title>
     <meta
       name="description"
-      content="Pediatra em Curitiba com consulta sem pressa, explicação clara e disponibilidade por WhatsApp após a consulta."
+      content="O raciocínio por trás da escolha: 40+ anos de consultório, formação pela UFPR traduzida em segurança para a família, e uma consulta feita de escuta, explicação e WhatsApp depois."
     />
     <style>
       @font-face {
@@ -815,6 +815,82 @@
         width: clamp(86px, 13vw, 146px);
         opacity: 0.18;
         filter: brightness(0) invert(1);
+      }
+
+      /* Elementos espalhados — tamanhos e posições assimétricos */
+      .current-about-b {
+        left: 4%;
+        top: 12%;
+        width: clamp(52px, 7vw, 84px);
+        opacity: 0.22;
+        animation-delay: -2s;
+      }
+
+      .current-about-c {
+        right: 30%;
+        bottom: 8%;
+        width: clamp(94px, 16vw, 168px);
+        opacity: 0.14;
+        animation-delay: -7s;
+      }
+
+      .current-form-b {
+        left: 6%;
+        bottom: 9%;
+        width: clamp(110px, 18vw, 196px);
+        opacity: 0.16;
+        filter: brightness(0) invert(1);
+        animation-delay: -4s;
+      }
+
+      .current-form-c {
+        right: 22%;
+        top: 36px;
+        width: clamp(46px, 6vw, 72px);
+        opacity: 0.2;
+        filter: brightness(0) invert(1);
+        animation-delay: -8s;
+      }
+
+      .current-consulta-a {
+        left: 2%;
+        top: 44%;
+        width: clamp(120px, 19vw, 220px);
+        opacity: 0.12;
+        animation-delay: -3s;
+      }
+
+      .current-consulta-b {
+        right: 5%;
+        bottom: 14%;
+        width: clamp(56px, 8vw, 92px);
+        opacity: 0.22;
+        animation-delay: -6s;
+      }
+
+      .current-rec-b {
+        right: 6%;
+        top: 64px;
+        width: clamp(74px, 12vw, 134px);
+        opacity: 0.16;
+        animation-delay: -5s;
+      }
+
+      .current-rec-c {
+        left: 38%;
+        bottom: 7%;
+        width: clamp(44px, 6vw, 70px);
+        opacity: 0.2;
+        animation-delay: -9s;
+      }
+
+      .current-final-b {
+        left: 7%;
+        bottom: 12%;
+        width: clamp(64px, 10vw, 112px);
+        opacity: 0.14;
+        filter: brightness(0) invert(1);
+        animation-delay: -4s;
       }
 
       .small-card strong {
@@ -1887,6 +1963,318 @@
           display: none;
         }
       }
+
+      /* ===== Página Quem sou ===== */
+      .about-grid {
+        display: grid;
+        gap: 40px;
+        align-items: center;
+      }
+
+      .about-copy h1 {
+        margin: 0 0 18px;
+        font-size: clamp(34px, 6vw, 48px);
+        font-weight: 700;
+        line-height: 1.1;
+      }
+
+      .about-copy p + p {
+        margin-top: 1em;
+      }
+
+      .about-disarm {
+        margin-top: 24px;
+        padding: 20px 24px;
+        border-left: 3px solid var(--mar-aberto);
+        border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+        background: rgba(60, 96, 138, 0.06);
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 1.5;
+      }
+
+      .about-photo {
+        align-self: stretch;
+      }
+
+      .about-photo .photo-real {
+        height: 100%;
+        min-height: 420px;
+        object-fit: cover;
+      }
+
+      .timeline {
+        margin: 48px 0 0;
+        padding: 0 0 0 30px;
+        border-left: 2px solid var(--linha);
+        list-style: none;
+      }
+
+      .timeline-item {
+        position: relative;
+        padding: 0 0 8px;
+      }
+
+      .timeline-item + .timeline-item {
+        margin-top: 34px;
+      }
+
+      .timeline-item::before {
+        position: absolute;
+        top: 4px;
+        left: -39px;
+        width: 16px;
+        height: 16px;
+        border: 3px solid var(--branco);
+        border-radius: 999px;
+        background: var(--mar-aberto);
+        box-shadow: 0 0 0 1px var(--linha);
+        content: "";
+      }
+
+      .timeline-year {
+        display: block;
+        margin: 0 0 6px;
+        color: var(--mar-aberto);
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 0.09em;
+        text-transform: uppercase;
+      }
+
+      .timeline-fact {
+        margin: 0 0 8px;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 1.3;
+      }
+
+      .timeline-meaning {
+        margin: 0;
+        max-width: 64ch;
+        color: rgba(35, 36, 41, 0.78);
+        font-size: 16px;
+        line-height: 1.6;
+      }
+
+      .section-depth .timeline {
+        border-left-color: rgba(255, 255, 255, 0.32);
+      }
+
+      .section-depth .timeline-item::before {
+        border-color: transparent;
+        background: var(--espuma);
+        box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.45);
+      }
+
+      .section-depth .timeline-year {
+        color: var(--espuma);
+      }
+
+      .section-depth .timeline-fact {
+        color: var(--branco);
+      }
+
+      .section-depth .timeline-meaning {
+        color: rgba(255, 255, 255, 0.85);
+      }
+
+      /* Foto por cima do fundo, surgindo aos poucos da esquerda
+         para a direita via máscara alfa longa. Oculta no mobile. */
+      .form-photo {
+        display: none;
+      }
+
+      @media (min-width: 900px) {
+        .form-photo {
+          position: absolute;
+          inset: 0 0 0 auto;
+          z-index: 1;
+          display: block;
+          width: 72%;
+          overflow: hidden;
+          pointer-events: none;
+        }
+
+        .form-photo img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: 60% center;
+          filter: saturate(0.96);
+          -webkit-mask-image: linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, 0) 10%,
+            rgba(0, 0, 0, 0.15) 30%,
+            rgba(0, 0, 0, 0.5) 52%,
+            rgba(0, 0, 0, 0.85) 74%,
+            #000 90%
+          );
+          mask-image: linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, 0) 10%,
+            rgba(0, 0, 0, 0.15) 30%,
+            rgba(0, 0, 0, 0.5) 52%,
+            rgba(0, 0, 0, 0.85) 74%,
+            #000 90%
+          );
+        }
+      }
+
+      @media (min-width: 1280px) {
+        .form-photo {
+          width: 64%;
+        }
+      }
+
+      .consulta-cards {
+        margin: 40px 0 0;
+        display: grid;
+        gap: 18px;
+      }
+
+      .consulta-card {
+        position: relative;
+        padding: 28px 28px 30px;
+        border-radius: var(--radius-md);
+        box-shadow: 0 2px 14px rgba(35, 36, 41, 0.06);
+        transition:
+          transform 240ms var(--ease-out),
+          box-shadow 240ms var(--ease-out);
+      }
+
+      .consulta-card:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--sombra);
+      }
+
+      .consulta-card .cc-num {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 34px;
+        height: 34px;
+        margin: 0 0 16px;
+        border-radius: 999px;
+        background: rgba(60, 96, 138, 0.14);
+        color: var(--mar-aberto);
+        font-size: 15px;
+        font-weight: 700;
+      }
+
+      .consulta-card h3 {
+        margin: 0 0 10px;
+        font-size: 19px;
+        font-weight: 600;
+        line-height: 1.3;
+      }
+
+      .consulta-card p {
+        margin: 0;
+        font-size: 16px;
+        line-height: 1.6;
+        color: rgba(35, 36, 41, 0.78);
+      }
+
+      /* Intensidades da paleta — família verde (Abrigo) e família azul (Mar Aberto) */
+      .cc-1 { background: var(--espuma); }
+      .cc-2 { background: var(--luz); }
+      .cc-3 { background: var(--abrigo); }
+      .cc-4 { background: #e4ebf3; }
+      .cc-5 { background: #c7d4e4; }
+
+      .cc-6 {
+        background:
+          linear-gradient(150deg, var(--mar-aberto) 0%, #33567c 100%);
+        color: var(--branco);
+      }
+
+      .cc-6 .cc-num {
+        background: rgba(255, 255, 255, 0.18);
+        color: var(--branco);
+      }
+
+      .cc-6 p {
+        color: rgba(255, 255, 255, 0.86);
+      }
+
+      @media (min-width: 720px) {
+        .consulta-cards {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 20px;
+        }
+      }
+
+      @media (min-width: 1000px) {
+        .consulta-cards {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      .not-here {
+        margin-top: 44px;
+        padding: 28px 30px;
+        border: 1px solid var(--linha);
+        border-radius: var(--radius-md);
+        background: var(--branco);
+        box-shadow: 0 2px 12px rgba(35, 36, 41, 0.06);
+      }
+
+      .not-here h3 {
+        margin: 0 0 16px;
+        font-size: 20px;
+        font-weight: 600;
+      }
+
+      .not-here ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: grid;
+        gap: 12px;
+      }
+
+      .not-here li {
+        position: relative;
+        padding-left: 26px;
+        line-height: 1.55;
+      }
+
+      .not-here li::before {
+        position: absolute;
+        left: 0;
+        color: var(--mar-aberto);
+        font-weight: 700;
+        content: "✕";
+      }
+
+      .about-closing {
+        margin: 40px 0 0;
+        max-width: 70ch;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 1.5;
+      }
+
+      .about-figure {
+        display: none;
+      }
+
+      @media (min-width: 900px) {
+        .about-grid {
+          grid-template-columns: 1.15fr 0.85fr;
+          gap: 56px;
+        }
+
+        .about-figure {
+          display: block;
+          width: clamp(180px, 18vw, 248px);
+          margin: 0 0 8px auto;
+          opacity: 0.9;
+        }
+      }
     </style>
   </head>
   <body>
@@ -1923,262 +2311,176 @@
       </div>
     </header>
 
-    <img class="scroll-guardian" src="id-visual/ilustracoes-svg/Guardia_4.svg" alt="" aria-hidden="true" />
-    <div class="scroll-bubbles" aria-hidden="true"></div>
-
     <main>
-      <section class="hero">
+      <section class="section">
         <div class="bubble-field" aria-hidden="true">
-          <span style="--x: 9%; --y: 72%; --size: 34px; --duration: 12s"></span>
-          <span style="--x: 78%; --y: 22%; --size: 72px; --duration: 18s; --delay: -7s; --opacity: 0.38"></span>
+          <span style="--x: 84%; --y: 24%; --size: 58px; --duration: 17s; --delay: -6s; --opacity: 0.34"></span>
         </div>
         <img class="decorative-current current-hero-a" src="id-visual/elementos-svg/3.svg" alt="" aria-hidden="true" />
-        <img class="hero-deco hero-deco-tr" src="id-visual/elementos-svg/7.svg" alt="" aria-hidden="true" />
-        <img class="hero-deco hero-deco-bl" src="id-visual/elementos-svg/12.svg" alt="" aria-hidden="true" />
-        <img class="hero-deco hero-deco-tl" src="id-visual/elementos-svg/10.svg" alt="" aria-hidden="true" />
-        <div class="container hero-grid">
-          <div class="hero-copy reveal">
+        <img class="decorative-current current-about-b" src="id-visual/elementos-svg/9.svg" alt="" aria-hidden="true" />
+        <img class="decorative-current current-about-c" src="id-visual/elementos-svg/13.svg" alt="" aria-hidden="true" />
+        <div class="container about-grid">
+          <div class="about-copy reveal">
             <p class="eyebrow hero-eyebrow">Prof. Dr. Rubens Cat · Pediatra · CRM/PR 9473 · RQE 4836</p>
-            <h1>A <span class="accent">tranquilidade</span> em saber <span class="accent">exatamente</span> o que fazer</h1>
+            <h1>Quem <span class="accent">sou</span></h1>
             <p class="lead">
-              Consulta sem pressa, explicação clara e o WhatsApp pessoal do Dr. Rubens anotado para quando a dúvida aparecer depois.
+              Esta página não é um currículo. É o raciocínio por trás da escolha — por que virei pediatra e o que mais de 40 anos de consultório me ensinaram sobre o que uma família realmente precisa quando algo preocupa.
             </p>
-            <div class="hero-social-ctas">
-              <div class="hero-cta-block">
-                <p class="hero-cta-prompt">Prefere conversar antes? A secretária orienta o próximo passo!</p>
-                <a class="button button-whatsapp" href="https://wa.me/5541985000828?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20com%20o%20Dr.%20Rubens%20Cat." target="_blank" rel="noopener noreferrer">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                  WhatsApp
-                </a>
-              </div>
-              <div class="hero-cta-block">
-                <p class="hero-cta-prompt">Quer saber mais? Acompanhe pelo Instagram!</p>
-                <a class="button button-instagram" href="https://www.instagram.com/dr.rubenscat" target="_blank" rel="noopener noreferrer">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-                  Instagram
-                </a>
-              </div>
-            </div>
+            <p>
+              Decidi cedo que queria passar a vida perto de crianças, mas demorei a entender que metade do meu trabalho não é com elas: é com quem as traz. A mãe que dormiu mal, o pai que pesquisou a noite inteira, a avó que ligou de longe. Cuidar bem de uma criança é, antes de tudo, devolver chão para os adultos que cuidam dela.
+            </p>
+            <p>
+              Foi isso que o tempo me ensinou: a maior parte do que assusta tem explicação simples — e dizer isso com calma, olhando nos olhos, vale mais do que qualquer exame pedido no susto. O que não tem explicação simples eu reconheço rápido, justamente porque já vi muito. Os dois casos pedem a mesma coisa de mim: tempo e clareza.
+            </p>
+            <p class="about-disarm">
+              Em mais de 40 anos atendendo crianças, aprendi que a pergunta "será que estou exagerando?" quase nunca é exagero — é uma mãe ou um pai prestando atenção. Procurar resposta não é excesso de zelo: é cuidado. Meu trabalho é transformar essa atenção em segurança.
+            </p>
           </div>
-          <div class="hero-widget reveal">
-            <div class="doctoralia-widget-wrap">
-              <a id="zl-url" class="zl-url" href="https://www.doctoralia.com.br/rubens-cat/pediatra/curitiba" rel="nofollow" data-zlw-doctor="rubens-cat" data-zlw-type="big_with_calendar" data-zlw-opinion="false" data-zlw-hide-branding="true" data-zlw-saas-only="false" data-zlw-a11y-title="Widget de marcação de consultas médicas">Marque uma consulta</a>
-              <script>!function($_x,_s,id){var js,fjs=$_x.getElementsByTagName(_s)[0];if(!$_x.getElementById(id)){js = $_x.createElement(_s);js.id = id;js.src = "//platform.docplanner.com/js/widget.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","zl-widget-s");</script>
-            </div>
-          </div>
+          <figure class="about-photo reveal">
+            <img class="photo-real" src="fotos/foto-rosto.webp" alt="Dr. Rubens Cat, pediatra em Curitiba" />
+          </figure>
         </div>
       </section>
 
-      <section class="section-video-photo">
-        <div class="container video-section-content">
-          <div class="hero-photo-wrap reveal">
-            <div class="hero-photo-frame">
-              <img src="fotos/foto-rosto.webp" alt="Dr. Rubens Cat, pediatra em Curitiba" />
-            </div>
-            <div class="hero-photo-badge">
-              <div class="badge-group">
-                <p class="badge-label">Experiência</p>
-                <ul class="badge-list">
-                  <li>Mais de 40 anos de consultório</li>
-                  <li>30 anos como professor na UFPR</li>
-                </ul>
-              </div>
-              <div class="badge-group">
-                <p class="badge-label">Atendimento</p>
-                <ul class="badge-list">
-                  <li>Consulta particular</li>
-                  <li>Presencial no Batel, Curitiba/PR</li>
-                  <li>Teleconsulta</li>
-                </ul>
-              </div>
-            </div>
-          </div>
+      <section class="section section-soft section-depth">
+        <div class="form-photo">
+          <img src="fotos/hospital-das-clinicas-1752357065.jpg" alt="Hospital de Clínicas da UFPR, onde o Dr. Rubens foi chefe do Serviço de Pediatria" />
         </div>
-        <div class="video-wrap">
-          <video class="video-bg" autoplay muted loop playsinline poster="fotos/video-hero-poster.jpg">
-            <source src="fotos/video-hero.webm" type="video/webm" />
-            <source src="fotos/video-hero.mp4" type="video/mp4" />
-          </video>
-          <div class="video-overlay" aria-hidden="true"></div>
-        </div>
-      </section>
-
-      <section class="section section-soft section-depth" id="diferenciais">
-        <div class="bubble-field" aria-hidden="true">
-          <span style="--x: 86%; --y: 26%; --size: 66px; --duration: 17s; --delay: -6s"></span>
-        </div>
-        <img class="section-illustration benefits-figure" src="id-visual/ilustracoes-svg/Explorador_4.svg" alt="" aria-hidden="true" />
         <img class="decorative-current current-benefits-a" src="id-visual/elementos-svg/6.svg" alt="" aria-hidden="true" />
-        <img class="decorative-current current-benefits-b" src="id-visual/elementos-svg/7.svg" alt="" aria-hidden="true" />
+        <img class="decorative-current current-form-b" src="id-visual/elementos-svg/2.svg" alt="" aria-hidden="true" />
+        <img class="decorative-current current-form-c" src="id-visual/elementos-svg/10.svg" alt="" aria-hidden="true" />
         <div class="container">
           <div class="section-kicker reveal">
-            <p class="eyebrow">O que muda para a família</p>
-            <h2>Presença antes, durante e <span class="accent">depois</span> da consulta.</h2>
-            <p>O diferencial não é uma lista de serviços. É a sensação de voltar para casa entendendo o que observar e sabendo com quem falar se algo mudar.</p>
+            <p class="eyebrow">A formação, traduzida</p>
+            <h2>Toda a trajetória pela UFPR — o que ela <span class="accent">muda</span> para você.</h2>
+            <p>Título não trata criança. O que importa não é o quanto a formação é importante para mim, e sim o que ela faz pela conduta que chega no seu filho.</p>
           </div>
 
-          <div class="benefits">
-            <article class="benefit reveal" data-number="1">
-              <div class="benefit-number">1</div>
-              <h3>Consulta sem pressa</h3>
-              <p>Começa no horário, sem atrasos. São 45 minutos de consulta — tempo de escuta, exame e explicação de todas as dúvidas.</p>
-            </article>
-
-            <article class="benefit reveal" data-number="2">
-              <div class="benefit-number">2</div>
-              <h3>WhatsApp pessoal após a consulta</h3>
-              <p>Disponível por WhatsApp para dúvidas e orientações fora do horário comercial (fins de semana e feriados).</p>
-            </article>
-
-            <article class="benefit reveal" data-number="3">
-              <div class="benefit-number">3</div>
-              <h3>Atendimento fora do horário</h3>
-              <p>Quando necessário, atendimento emergencial presencial ou por teleconsulta.</p>
-            </article>
-
-            <article class="benefit reveal" data-number="4">
-              <div class="benefit-number">4</div>
-              <h3>Estacionamento gratuito</h3>
-              <p>Praticidade para a família com bolsa e carrinho.</p>
-            </article>
-
-            <article class="benefit reveal" data-number="5">
-              <div class="benefit-number">5</div>
-              <h3>Retorno sem custo</h3>
-              <p>Para a mesma queixa, retorno sem custo. Cuidado completo, não uma única interação.</p>
-            </article>
-
-            <article class="benefit reveal" data-number="6">
-              <div class="benefit-number">6</div>
-              <h3>Atendimento aos sábados de manhã</h3>
-              <p>Horário alternativo para famílias com a agenda semanal cheia.</p>
-            </article>
-          </div>
+          <ol class="timeline">
+            <li class="timeline-item reveal">
+              <span class="timeline-year">Mais de 30 anos · UFPR</span>
+              <p class="timeline-fact">Formando pediatras na Universidade Federal do Paraná</p>
+              <p class="timeline-meaning">Quem ensina residentes é cobrado, todo ano, a se manter atualizado e a justificar cada conduta diante de quem questiona. Na prática, isso significa que você recebe a medicina de hoje — não a que se fazia há vinte anos por hábito.</p>
+            </li>
+            <li class="timeline-item reveal">
+              <span class="timeline-year">Pós-graduação · UFPR</span>
+              <p class="timeline-fact">Mestrado e Doutorado em Pediatria</p>
+              <p class="timeline-meaning">Pesquisar a fundo um problema muda a forma de explicá-lo. Cada recomendação vem com o porquê: você entende a decisão e sai capaz de repeti-la em casa, em vez de só obedecer a uma orientação que não ficou clara.</p>
+            </li>
+            <li class="timeline-item reveal">
+              <span class="timeline-year">Hospital de Clínicas · UFPR</span>
+              <p class="timeline-fact">Ex-chefe do Serviço de Pediatria do HC-UFPR</p>
+              <p class="timeline-meaning">Anos à frente de casos graves dão um repertório que o consultório sozinho não dá: a capacidade de separar, com segurança, o que assusta mas é comum do que é de fato urgente — e dizer qual é qual sem rodeio.</p>
+            </li>
+            <li class="timeline-item reveal">
+              <span class="timeline-year">Mais de 40 anos · Consultório</span>
+              <p class="timeline-fact">Quatro décadas de consultório particular</p>
+              <p class="timeline-meaning">O volume ensina um reconhecimento de padrões que nenhum livro substitui. Na prática isso vira menos exame desnecessário e menos antibiótico no escuro: a conduta vem da experiência de já ter visto aquilo centenas de vezes.</p>
+            </li>
+          </ol>
         </div>
       </section>
 
       <section class="section">
         <div class="bubble-field" aria-hidden="true">
-          <span style="--x: 42%; --y: 18%; --size: 20px; --duration: 12s; --delay: -5s"></span>
+          <span style="--x: 40%; --y: 16%; --size: 22px; --duration: 12s; --delay: -5s"></span>
         </div>
-        <img class="section-illustration proof-figure" src="id-visual/ilustracoes-svg/Elmo_2.svg" alt="" aria-hidden="true" />
-        <img class="decorative-current current-proof-a" src="id-visual/elementos-svg/11.svg" alt="" aria-hidden="true" />
-        <img class="decorative-current current-proof-b" src="id-visual/elementos-svg/3.svg" alt="" aria-hidden="true" />
-        <div class="container proof-layout">
-          <div class="proof-number reveal">
-            <p class="eyebrow">O que dizem mães e pais</p>
-            <strong>327</strong>
-            <span>famílias avaliaram com nota 5.</span>
-            <p>Avaliações verificadas no Google e Doctoralia, com padrões recorrentes de segurança, clareza e disponibilidade.</p>
-            <a class="text-link" href="https://www.doctoralia.com.br/rubens-cat/pediatra/curitiba" target="_blank" rel="noopener noreferrer">Veja mais avaliações</a>
+        <img class="decorative-current current-consulta-a" src="id-visual/elementos-svg/4.svg" alt="" aria-hidden="true" />
+        <img class="decorative-current current-consulta-b" src="id-visual/elementos-svg/8.svg" alt="" aria-hidden="true" />
+        <div class="container">
+          <img class="about-figure reveal" src="id-visual/ilustracoes-svg/Explorador_4.svg" alt="" aria-hidden="true" />
+          <div class="section-kicker reveal">
+            <p class="eyebrow">Como é uma consulta</p>
+            <h2>Uma relação de <span class="accent">parceria</span>, não um atendimento.</h2>
+            <p>Você não vem buscar uma ordem. Vem decidir junto, com alguém que ouve primeiro e explica depois — para que o cuidado continue funcionando quando você já estiver de volta em casa.</p>
           </div>
 
-          <div class="quotes">
-            <blockquote class="quote-feature reveal">
-              <p>"Meus filhos adoram ir na consulta. Constantemente lembram do 'tio Rubens'."</p>
-              <cite>M. · avaliação pública</cite>
-            </blockquote>
-
-            <blockquote class="reveal">
-              <p>"É pediatra dos meus filhos há 14 anos e temos total confiança nele."</p>
-              <cite>C. · avaliação pública</cite>
-            </blockquote>
-
-            <blockquote class="reveal">
-              <p>"Saímos da consulta muito confiantes! Já tínhamos passado por outros profissionais e apenas hoje saímos com essa confiança."</p>
-              <cite>B. · avaliação pública</cite>
-            </blockquote>
-
-            <blockquote class="reveal">
-              <p>"Depois de 5 anos morando em Curitiba, finalmente encontrei O Pediatra."</p>
-              <cite>F. · avaliação pública</cite>
-            </blockquote>
-
-            <blockquote class="reveal">
-              <p>"Minha filha não frequenta mais pronto atendimento, pois tenho um médico sempre à disposição."</p>
-              <cite>S. · avaliação pública</cite>
-            </blockquote>
-
-            <blockquote class="reveal">
-              <p>"A consulta é muito clara, explicativa: uma aula. Excelente médico."</p>
-              <cite>Avaliação pública</cite>
-            </blockquote>
-
-            <blockquote class="quote-extra-desktop reveal">
-              <p>"Fala de forma paternal com os pacientes. Meu filho ama ir à consulta com ele."</p>
-              <cite>I. · avaliação pública</cite>
-            </blockquote>
-
-            <blockquote class="quote-extra-desktop reveal">
-              <p>"Atendeu em pleno sábado à noite (teleconsulta) após termos o diagnóstico de covid do nosso filho."</p>
-              <cite>K. · avaliação pública</cite>
-            </blockquote>
+          <div class="consulta-cards">
+            <article class="consulta-card cc-1 reveal">
+              <span class="cc-num" aria-hidden="true">1</span>
+              <h3>A primeira pergunta é sua</h3>
+              <p>Antes de qualquer exame: "o que mais está te preocupando?". Você é ouvida antes de ser orientada — porque o que te tirou o sono costuma ser exatamente o ponto certo de começar.</p>
+            </article>
+            <article class="consulta-card cc-2 reveal">
+              <span class="cc-num" aria-hidden="true">2</span>
+              <h3>Você pesquisou antes? Ótimo</h3>
+              <p>O que você observou em casa entra na conversa como informação, não como erro. Decidimos juntos, com o que você viu, não apesar disso.</p>
+            </article>
+            <article class="consulta-card cc-3 reveal">
+              <span class="cc-num" aria-hidden="true">3</span>
+              <h3>Tempo real com a criança</h3>
+              <p>Exame sem pressa e uma relação em que ela não chora de medo — e, com o tempo, volta sem ser arrastada. Boa parte das famílias conta que o filho passa a pedir para vir.</p>
+            </article>
+            <article class="consulta-card cc-4 reveal">
+              <span class="cc-num" aria-hidden="true">4</span>
+              <h3>Explicação que você repete em casa</h3>
+              <p>Você sai sabendo explicar para o pai, a avó e a escola — com suas palavras, com segurança — em vez de decorar o nome de um remédio.</p>
+            </article>
+            <article class="consulta-card cc-5 reveal">
+              <span class="cc-num" aria-hidden="true">5</span>
+              <h3>Critérios concretos antes de ir embora</h3>
+              <p>"Se acontecer X, me chama; se acontecer Y, vá ao pronto-atendimento." Você vai dormir sabendo o que observar, sem a dúvida no escuro.</p>
+            </article>
+            <article class="consulta-card cc-6 reveal">
+              <span class="cc-num" aria-hidden="true">6</span>
+              <h3>WhatsApp pessoal ao final da consulta</h3>
+              <p>O acesso direto que faz a maioria das famílias deixar de correr ao pronto-atendimento por uma dúvida que uma mensagem resolve.</p>
+            </article>
           </div>
-        </div>
-        <div class="container" style="margin-top: 42px; text-align: center;">
-          <a class="button button-primary reveal" href="https://www.doctoralia.com.br/rubens-cat/pediatra/curitiba" target="_blank" rel="noopener noreferrer">Agende aqui pela Doctoralia!</a>
+
+          <div class="not-here reveal">
+            <h3>O que você não vai encontrar aqui</h3>
+            <ul>
+              <li>Não vai ser dispensada por ter pesquisado antes de vir.</li>
+              <li>Não vai sair com uma receita na mão e sem entender o motivo dela.</li>
+              <li>Não vai se sentir julgada por perguntar "será que é muito?".</li>
+            </ul>
+          </div>
         </div>
       </section>
 
       <section class="section section-soft">
         <img class="decorative-current current-prenatal-a" src="id-visual/elementos-svg/7.svg" alt="" aria-hidden="true" />
-        <div class="container prenatal">
-          <div class="prenatal-visual reveal">
-            <div class="prenatal-slideshow" role="region" aria-label="Fotos do consultório">
-              <img class="slide is-active" src="fotos/consultorio-1.webp" alt="Consultório Dr. Rubens Cat — foto 1" />
-              <img class="slide" src="fotos/consultorio-2.webp" alt="Consultório Dr. Rubens Cat — foto 2" aria-hidden="true" />
-              <img class="slide" src="fotos/consultorio-3.webp" alt="Consultório Dr. Rubens Cat — foto 3" aria-hidden="true" />
-              <img class="slide" src="fotos/consultorio-4.webp" alt="Consultório Dr. Rubens Cat — foto 4" aria-hidden="true" />
-              <img class="slide" src="fotos/consultorio-5.webp" alt="Consultório Dr. Rubens Cat — foto 5" aria-hidden="true" />
-              <img class="slide" src="fotos/consultorio-6.webp" alt="Consultório Dr. Rubens Cat — foto 6" aria-hidden="true" />
-
-              <button class="slide-arrow slide-arrow-prev" aria-label="Foto anterior">
-                <svg width="8" height="14" viewBox="0 0 8 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <polyline points="7,1 1,7 7,13" />
-                </svg>
-              </button>
-              <button class="slide-arrow slide-arrow-next" aria-label="Próxima foto">
-                <svg width="8" height="14" viewBox="0 0 8 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <polyline points="1,1 7,7 1,13" />
-                </svg>
-              </button>
-
-              <div class="slide-controls">
-                <button class="slide-pause" aria-label="Pausar apresentação">
-                  <svg class="icon-pause" width="10" height="12" viewBox="0 0 10 12" fill="currentColor" aria-hidden="true">
-                    <rect x="0" y="0" width="3.5" height="12" rx="1.5" />
-                    <rect x="6.5" y="0" width="3.5" height="12" rx="1.5" />
-                  </svg>
-                  <svg class="icon-play" width="10" height="12" viewBox="0 0 10 12" fill="currentColor" aria-hidden="true" style="display:none">
-                    <path d="M0.5 0.5 L9.5 6 L0.5 11.5 Z" />
-                  </svg>
-                </button>
-                <button class="slide-dot is-active" aria-label="Foto 1" aria-selected="true"></button>
-                <button class="slide-dot" aria-label="Foto 2" aria-selected="false"></button>
-                <button class="slide-dot" aria-label="Foto 3" aria-selected="false"></button>
-                <button class="slide-dot" aria-label="Foto 4" aria-selected="false"></button>
-                <button class="slide-dot" aria-label="Foto 5" aria-selected="false"></button>
-                <button class="slide-dot" aria-label="Foto 6" aria-selected="false"></button>
-              </div>
-            </div>
-            <img class="guardian" src="id-visual/ilustracoes-svg/Guardia_4.svg" alt="" aria-hidden="true" />
+        <img class="decorative-current current-rec-b" src="id-visual/elementos-svg/5.svg" alt="" aria-hidden="true" />
+        <img class="decorative-current current-rec-c" src="id-visual/elementos-svg/1.svg" alt="" aria-hidden="true" />
+        <div class="container">
+          <div class="section-kicker reveal">
+            <p class="eyebrow">Reconhecimentos</p>
+            <h2>O reconhecimento vem <span class="accent">depois</span> do cuidado.</h2>
+            <p>Aparece aqui no fim, e não na abertura, de propósito: é consequência do trabalho, não o argumento para escolhê-lo.</p>
           </div>
 
-          <div class="prenatal-copy reveal">
-            <p class="eyebrow">Para gestantes</p>
-            <h3>Antes do nascimento, uma conversa que <span class="accent">organiza</span> o começo.</h3>
-            <p class="lead">
-              A consulta pré-natal pediátrica ajuda a família a chegar aos primeiros dias com menos ruído e mais segurança.
-            </p>
-            <ul class="checklist">
-              <li>O que observar nos primeiros dias do bebê?</li>
-              <li>Como se preparar para amamentação, sono, banho e sinais de alerta?</li>
-              <li>Quando procurar ajuda e quando respirar fundo?</li>
-            </ul>
-            <div class="hero-actions">
-              <a class="button button-primary" href="contatos.html">Agende a consulta pré-natal pediátrica</a>
-            </div>
-          </div>
+          <ol class="timeline">
+            <li class="timeline-item reveal">
+              <span class="timeline-year">2011 · 2013 · 2015 · 2019 · 2021</span>
+              <p class="timeline-fact">Professor Homenageado — Turmas de Medicina da UFPR</p>
+              <p class="timeline-meaning">Homenagem escolhida pelos próprios formandos, em cinco turmas diferentes ao longo de uma década.</p>
+            </li>
+            <li class="timeline-item reveal">
+              <span class="timeline-year">2017 · 2018</span>
+              <p class="timeline-fact">Professor Homenageado — Turmas de Residentes de Pediatria da UFPR</p>
+              <p class="timeline-meaning">Reconhecimento de quem é formado por ele — os médicos que estão se tornando pediatras.</p>
+            </li>
+            <li class="timeline-item reveal">
+              <span class="timeline-year">Câmara Municipal de Curitiba</span>
+              <p class="timeline-fact">Profissional do Ano e Homenagem do Dia do Médico</p>
+              <p class="timeline-meaning">Reconhecimento público da atuação na pediatria de Curitiba.</p>
+            </li>
+            <li class="timeline-item reveal">
+              <span class="timeline-year">Assembleia Legislativa do Paraná</span>
+              <p class="timeline-fact">Menção Honrosa</p>
+              <p class="timeline-meaning">E Reconhecimento Público da Secretaria de Justiça, Família e Trabalho do Paraná.</p>
+            </li>
+            <li class="timeline-item reveal">
+              <span class="timeline-year">2019 · 2020 · 2022 · 2023 · 2024</span>
+              <p class="timeline-fact">5x Selo de Qualidade Doctoralia</p>
+              <p class="timeline-meaning">Selo baseado em avaliações verificadas de pacientes — reconhecimento que vem de quem foi atendido.</p>
+            </li>
+          </ol>
+
+          <p class="about-closing reveal">
+            Nada disso aparece numa consulta. O que aparece é o tempo, a explicação e o WhatsApp que continua respondendo depois que você vai embora.
+          </p>
         </div>
       </section>
 
@@ -2187,6 +2489,7 @@
           <span style="--x: 76%; --y: 18%; --size: 24px; --duration: 11s; --delay: -4s; --opacity: 0.4"></span>
         </div>
         <img class="decorative-current current-final-a" src="id-visual/elementos-svg/11.svg" alt="" aria-hidden="true" />
+        <img class="decorative-current current-final-b" src="id-visual/elementos-svg/13.svg" alt="" aria-hidden="true" />
         <div class="container final-grid">
           <div class="reveal">
             <p class="eyebrow">Contatos</p>
